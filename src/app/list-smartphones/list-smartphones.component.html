@@ -1,0 +1,20 @@
+<div class="card-body">
+  <div class="row row-cols-1 row-cols-md-4 text-center m-5">
+    <div *ngFor="let p of produits; let i = index">
+      <div class="col mt-5">
+        <div class="card" id="card-film" style="width: 18rem;">
+          <a routerLink="{{'produitDetail/' + p.id}}" class="text-decoration-none">
+            <img class="card-img-top"  src = "{{p.images[0]}}" style="height: 400px;">
+            <span class="fa fa-star" style="color: orange"></span>
+            <div>
+              <h5 class="card-title text-center" [ngStyle]="{color : 'black'}">{{p.title}}</h5>
+              <!--              <ngb-rating [max]="10" [rate] = $any(f.vote_average) [readonly]="false"></ngb-rating>-->
+              <!--              <a href="" class="btn btn-primary" id="favoris">Add to Favoris</a>-->
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
